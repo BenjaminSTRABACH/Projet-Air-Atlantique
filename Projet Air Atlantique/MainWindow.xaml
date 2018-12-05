@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF"
+        xmlns:local="clr-namespace:Projet_Air_Atlantique"
         mc:Ignorable="d"
         Title="MainWindow" Height="480" Width="853">
 	<!--Ecran-->
@@ -24,7 +24,7 @@
 					<ColumnDefinition/>
 					<ColumnDefinition/>
 				</Grid.ColumnDefinitions>
-				<Image Source="medias/logoAA_White.PNG" Width="65" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,-1" Grid.ColumnSpan="2" />
+				<Image Source="Medias/logoAA_White.PNG" Width="65" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,-1" Grid.ColumnSpan="2" />
 				<Button Margin="0" Grid.Column="1" Background="#F7F8F7" BorderThickness="0 0 1 0" Click="Button_Click">
 
 				</Button>
