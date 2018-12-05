@@ -101,14 +101,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="medias\logoAA_White.PNG" />
-    <Resource Include="medias\man-user.png" />
-    <Resource Include="medias\plane.png" />
-    <Resource Include="medias\stock.png" />
-    <Resource Include="medias\ticket.png" />
+    <Resource Include="Medias\logoAA_White.PNG" />
+    <Resource Include="Medias\man-user.png" />
+    <Resource Include="Medias\plane.png" />
+    <Resource Include="Medias\stock.png" />
+    <Resource Include="Medias\ticket.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
+    <Folder Include="Structure\" />
     <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
