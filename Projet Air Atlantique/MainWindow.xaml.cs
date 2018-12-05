@@ -24,5 +24,25 @@ namespace Projet_Air_Atlantique
         {
             InitializeComponent();
         }
+
+        private void Button_Click_Vols(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_Clients(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_Billets(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_Maintenance(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
