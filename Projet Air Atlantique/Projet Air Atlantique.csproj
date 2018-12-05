@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Aeroport.cs" />
+    <Compile Include="Model\Avion.cs" />
+    <Compile Include="Model\Billet.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Personnel.cs" />
+    <Compile Include="Model\Vol.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,6 +106,10 @@
     <Resource Include="medias\plane.png" />
     <Resource Include="medias\stock.png" />
     <Resource Include="medias\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
