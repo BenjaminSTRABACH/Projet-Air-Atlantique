@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Windows;
+using MySql.Data.MySqlClient;
 
 namespace Projet_Air_Atlantique.DAO_Model
 {
