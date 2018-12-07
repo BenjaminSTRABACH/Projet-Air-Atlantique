@@ -110,7 +110,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Medias\logoAA_White.PNG" />
+    <Resource Include="Medias\logoAA_Black.PNG" />
     <Resource Include="Medias\man-user.png" />
     <Resource Include="Medias\plane.png" />
     <Resource Include="Medias\stock.png" />
