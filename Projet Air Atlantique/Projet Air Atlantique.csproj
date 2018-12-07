@@ -61,12 +61,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\Aeroport.cs" />
-    <Compile Include="Model\Avion.cs" />
-    <Compile Include="Model\Billet.cs" />
-    <Compile Include="Model\Client.cs" />
-    <Compile Include="Model\Personnel.cs" />
-    <Compile Include="Model\Vol.cs" />
+    <Compile Include="DAO_Model\Aeroport.cs" />
+    <Compile Include="DAO_Model\Avion.cs" />
+    <Compile Include="DAO_Model\Billet.cs" />
+    <Compile Include="DAO_Model\Client.cs" />
+    <Compile Include="DAO_Model\Personnel.cs" />
+    <Compile Include="DAO_Model\Vol.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,7 +117,7 @@
     <Resource Include="Medias\ticket.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
+    <Folder Include="DAL_Model\" />
     <Folder Include="Structure\" />
     <Folder Include="View\" />
   </ItemGroup>
