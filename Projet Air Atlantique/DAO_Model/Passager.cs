@@ -11,7 +11,7 @@ namespace Projet_Air_Atlantique
         private int IdPassager;
         private string Nom;
         private string Prenom;
-        private int Genre;
+        private bool Genre;
         private DateTime DateNaissance;
         private int PointsFidelite;
         private int Tel;
@@ -32,7 +32,7 @@ namespace Projet_Air_Atlantique
             return this.Prenom;
         }
 
-        public int GetGenre()
+        public bool GetGenre()
         {
             return this.Genre;
         }
