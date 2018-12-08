@@ -13,7 +13,7 @@ namespace Projet_Air_Atlantique
         private int TypeAvion_IdTypeAvion;
         private string Configuration;
         private string TypePneu;
-        private int Location;
+        private bool Location;
         private DateTime HeuresVol;
 
         public int GetidAvion()
@@ -66,7 +66,7 @@ namespace Projet_Air_Atlantique
             this.TypePneu = TypePneu;
         }
 
-        public int Getlocation()
+        public bool Getlocation()
         {
             return this.Location;
         }

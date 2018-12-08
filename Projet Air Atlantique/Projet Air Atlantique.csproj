@@ -132,5 +132,8 @@
   <ItemGroup>
     <Resource Include="Medias\maintenance.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Medias\logoAA_Blue.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
