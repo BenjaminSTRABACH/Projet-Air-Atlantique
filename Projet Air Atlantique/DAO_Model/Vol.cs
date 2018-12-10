@@ -20,15 +20,16 @@ namespace Projet_Air_Atlantique
 
         public Vol() { }
 
-        public Vol(int IdVol, string Reference, DateTime DepartPrevu, DateTime ArriveePrevue, DateTime DepartEffectif, DateTime ArriveeEffective)
+        public Vol(int IdVol, string Reference, DateTime DepartPrevu, DateTime ArriveePrevue, DateTime DepartEffectif, DateTime ArriveeEffective, string Etat)
         {
+            this.IdVol = IdVol;
+            this.Reference = Reference;
+            this.DepartPrevu = DepartPrevu;
+            this.ArriveePrevue = ArriveePrevue;
+            this.DepartEffectif = DepartEffectif;
+            this.ArriveeEffective = ArriveeEffective;
+            this.Etat = Etat;
 
-        }
-
-        public int IdVolProperty
-        {
-            get { return IdVol; }
-            set { IdVol = value; }
         }
 
         public string ReferenceProperty

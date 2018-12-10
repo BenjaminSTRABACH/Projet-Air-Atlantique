@@ -25,11 +25,6 @@ namespace Projet_Air_Atlantique
             this.HeuresVol = HeuresVol;
         }
 
-        public int IdAvionProperty
-        {
-            get { return IdAvion; }
-            set { IdAvion = value; }
-        }
         public string ConfigurationProperty
         {
             get { return Configuration; }
