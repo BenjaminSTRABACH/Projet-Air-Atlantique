@@ -72,7 +72,7 @@
                 <Image Source="Medias/man-user.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26.2,18,0,0" Grid.Column="2" Height="30" RenderTransformOrigin="0.041,0.044"/>
                 <Button Grid.Column="2" Background="#F7F8F7"  FontWeight="Bold" Foreground="#333333"   FontFamily="Oswald" Grid.ColumnSpan="2" Height="Auto"  Margin="194.2,0,1,0" Content="Billets" Click="Button_Click_Billets"/>
                 <Image Source="Medias/ticket.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,18,0,0" Grid.Column="3" Height="30" RenderTransformOrigin="0.041,0.044"/>
-                <Button Margin="195,0,0.2,0" Grid.Column="3" FontWeight="Bold" Foreground="#333333"  FontFamily="Oswald" Background="#F7F8F7" Grid.ColumnSpan="2" Height="Auto" Content="Maintenance"  Click="Button_Click_Maintenance"/>
+                <Button Margin="195,0,0.2,0" Grid.Column="3" FontWeight="Bold" Foreground="#333333" FontFamily="Oswald" Background="#F7F8F7" Grid.ColumnSpan="2" Height="Auto" Content="Maintenance"  Click="Button_Click_Maintenance"/>
                 <Image Source="Medias/maintenance.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,18,0,0" Grid.Column="4" Height="30" RenderTransformOrigin="0.041,0.044"/>
             </Grid>
         </Grid>
