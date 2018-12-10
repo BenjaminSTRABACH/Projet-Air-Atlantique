@@ -10,20 +10,19 @@ namespace Projet_Air_Atlantique.Models.DAL
 {
     class Mod_Vol
     {
-        private static DbConnection connection;
+        private static DbConnection connect;
 
         public Mod_Vol()
         {
-            //Instanciation de la connexion avec la BBD lors de la création du Clients_Model
-            connection = new DbConnection();
+            connect = new DbConnection();
         }
 
         //Liste des vols
         public void SelectVolBinders(List<VolController> list)
         {
             string query = "SELECT * FROM vol;";
-            connection.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, connection.GetConnection());
+            connect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
 

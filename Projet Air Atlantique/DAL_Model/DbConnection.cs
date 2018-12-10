@@ -14,6 +14,11 @@ namespace Projet_Air_Atlantique.Models.DAL
         private string uid;
         private string password;
 
+        public DbConnection()
+        {
+            InitConnection();
+        }
+
         //Initialisation de la connexion à la base de données
         public void InitConnection()
         {
@@ -45,7 +50,7 @@ namespace Projet_Air_Atlantique.Models.DAL
                 switch (ex.Number)
                 {
                     case 0:
-                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        MessageBox.Show("Cannot connect to server. Contact administrator");
                         break;
 
                     case 1045:
