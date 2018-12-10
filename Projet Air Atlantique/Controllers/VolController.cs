@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
-namespace Projet_Air_Atlantique.Models.DAO
+namespace Projet_Air_Atlantique.Controllers
 {
-    class Vol
+    class VolController : INotifyPropertyChanged
     {
-       // idVol reference   departPrevu arriveePrevue   departEffectif arriveeEffective    etat
-
+        //Attributs
         private int IdVol;
         private string Reference;
         private DateTime DepartPrevu;
@@ -18,9 +18,10 @@ namespace Projet_Air_Atlantique.Models.DAO
         private DateTime ArriveeEffective;
         private string Etat;
 
-        public Vol() { }
+        //Constructeur
+        public VolController() { }
 
-        public Vol(int IdVol, string Reference, DateTime DepartPrevu, DateTime ArriveePrevue, DateTime DepartEffectif, DateTime ArriveeEffective, string Etat)
+        public VolController(int IdVol, string Reference, DateTime DepartPrevu, DateTime ArriveePrevue, DateTime DepartEffectif, DateTime ArriveeEffective, string Etat)
         {
             this.IdVol = IdVol;
             this.Reference = Reference;
@@ -29,7 +30,6 @@ namespace Projet_Air_Atlantique.Models.DAO
             this.DepartEffectif = DepartEffectif;
             this.ArriveeEffective = ArriveeEffective;
             this.Etat = Etat;
-
         }
 
         public string ReferenceProperty
@@ -67,5 +67,7 @@ namespace Projet_Air_Atlantique.Models.DAO
             get { return Etat; }
             set { Etat = value; }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

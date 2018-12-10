@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Projet_Air_Atlantique.Models.DAL;
+using Projet_Air_Atlantique.Controllers;
 
 namespace Projet_Air_Atlantique
 {
@@ -20,28 +22,13 @@ namespace Projet_Air_Atlantique
     /// </summary>
     public partial class MainWindow : Window
     {
+        Mod_Vol mod_vol = new Mod_Vol();
+        static List<VolController> list_vols_controllers = new List<VolController>();
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click_Vols(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_Clients(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_Billets(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_Maintenance(object sender, RoutedEventArgs e)
-        {
+            mod_vol.SelectVolBinders(list_vols_controllers);
 
         }
     }

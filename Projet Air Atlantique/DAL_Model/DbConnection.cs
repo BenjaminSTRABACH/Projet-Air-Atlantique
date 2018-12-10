@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Windows;
 using MySql.Data.MySqlClient;
 
-namespace Projet_Air_Atlantique.DAO_Model
+namespace Projet_Air_Atlantique.Models.DAL
 {
     class DbConnection
     {
@@ -26,6 +26,12 @@ namespace Projet_Air_Atlantique.DAO_Model
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
+        }
+
+        //Getter de la connexion
+        public MySqlConnection getconnection()
+        {
+            return connection;
         }
 
         //Ouverture de la connexion à la base de données

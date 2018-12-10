@@ -76,5 +76,12 @@
 				<Image Source="Medias/maintenance.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,18,0,0" Grid.Column="4" Height="30" RenderTransformOrigin="0.041,0.044"/>
 			</Grid>
 		</Grid>
+		<DataGrid Name="listeVols" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="10,90,0,10.4" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeVols_SelectionChanged" Width="1054">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Reference" Binding="{Binding ReferenceProperty, Mode=OneWay}" />
+				<DataGridTextColumn Header="DepartPrevu" Binding="{Binding DepartPrevuProperty, Mode=TwoWay}" />
+				<DataGridTextColumn Header="ArriveePrevue" Binding="{Binding ArriveePrevueProperty, Mode=TwoWay}" />
+			</DataGrid.Columns>
+		</DataGrid>
 	</Grid>
 </Window>

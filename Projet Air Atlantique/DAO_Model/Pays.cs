@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_Air_Atlantique.DAO_Model
+namespace Projet_Air_Atlantique.Models.DAO
 {
     class Pays
     {
