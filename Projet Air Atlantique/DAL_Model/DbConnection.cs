@@ -14,10 +14,11 @@ namespace Projet_Air_Atlantique.DAO_Model
         private string uid;
         private string password;
 
-        public Boolean OpenConnection()
+        //Initialisation de la connexion à la base de données
+        public void initConnection()
         {
             server = "localhost";
-            database = "air_atlantique";
+            database = "airatlantique";
             uid = "admindb";
             password = "KSKskJNggKWr9EEZ";
             string connectionString;
@@ -25,8 +26,45 @@ namespace Projet_Air_Atlantique.DAO_Model
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
-            connection.Open();
-            return true;
+        }
+
+        //Ouverture de la connexion à la base de données
+        public bool OpenConnection()
+        {
+            try
+            {
+                connection.Open();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+                }
+                return false;
+            }
+        }
+
+        //Fermeture de la connexion à la base de données
+        public bool CloseConnection()
+        {
+            try
+            {
+                connection.Close();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
         }
     }
 }
