@@ -29,6 +29,11 @@ namespace Projet_Air_Atlantique
         {
             InitializeComponent();
             mod_vol.SelectVolBinders(list_vols_controllers);
+            this.listeVols.ItemsSource = list_vols_controllers;
+        }
+
+        private void ListeVols_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

@@ -15,21 +15,19 @@ namespace Projet_Air_Atlantique.Models.DAL
         private string password;
 
         //Initialisation de la connexion à la base de données
-        public void initConnection()
+        public void InitConnection()
         {
             server = "localhost";
             database = "airatlantique";
             uid = "admindb";
             password = "KSKskJNggKWr9EEZ";
             string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
+            connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             connection = new MySqlConnection(connectionString);
         }
 
         //Getter de la connexion
-        public MySqlConnection getconnection()
+        public MySqlConnection GetConnection()
         {
             return connection;
         }

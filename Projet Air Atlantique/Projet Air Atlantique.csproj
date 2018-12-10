@@ -73,8 +73,11 @@
     <Compile Include="DAO_Model\Aeroport.cs" />
     <Compile Include="DAO_Model\Avion.cs" />
     <Compile Include="DAO_Model\Billet.cs" />
-    <Compile Include="DAO_Model\Passager.cs" />
     <Compile Include="DAL_Model\DbConnection.cs" />
+    <Compile Include="DAO_Model\Client.cs" />
+    <Compile Include="DAO_Model\Flotte.cs" />
+    <Compile Include="DAO_Model\ModeleAvion.cs" />
+    <Compile Include="DAO_Model\Motorisation.cs" />
     <Compile Include="DAO_Model\Pays.cs" />
     <Compile Include="DAO_Model\Personnel.cs" />
     <Compile Include="DAO_Model\Vol.cs" />

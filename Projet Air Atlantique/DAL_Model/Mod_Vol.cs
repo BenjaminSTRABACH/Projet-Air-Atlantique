@@ -21,9 +21,9 @@ namespace Projet_Air_Atlantique.Models.DAL
         //Liste des vols
         public void SelectVolBinders(List<VolController> list)
         {
-            string query = "SELECT * FROM adherent;";
+            string query = "SELECT * FROM vol;";
             connection.OpenConnection();
-            MySqlCommand cmd = new MySqlCommand(query, connection.getconnection());
+            MySqlCommand cmd = new MySqlCommand(query, connection.GetConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
 
