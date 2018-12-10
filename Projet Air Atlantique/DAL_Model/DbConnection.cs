@@ -17,7 +17,7 @@ namespace Projet_Air_Atlantique.DAO_Model
         public Boolean OpenConnection()
         {
             server = "localhost";
-            database = "air_atlantique";
+            database = "airatlantique";
             uid = "admindb";
             password = "KSKskJNggKWr9EEZ";
             string connectionString;

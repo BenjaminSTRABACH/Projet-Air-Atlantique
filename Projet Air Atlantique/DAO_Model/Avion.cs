@@ -9,82 +9,49 @@ namespace Projet_Air_Atlantique
     class Avion
     {
         private int IdAvion;
-        private int Vol_idVol;
-        private int TypeAvion_IdTypeAvion;
         private string Configuration;
         private string TypePneu;
         private bool Location;
         private DateTime HeuresVol;
 
-        public int GetidAvion()
-        {
-            return this.IdAvion;
-        }
+        public Avion() { }
 
-        public void SetIdAvion(int IdAvion)
+        public Avion(int IdAvion, string Configuration, string TypePneu, bool Location, DateTime HeuresVol)
         {
             this.IdAvion = IdAvion;
-        }
-
-        public int GetVol_idVol()
-        {
-            return this.Vol_idVol;
-        }
-
-        public void SetVol_idVol(int Vol_idVol)
-        {
-            this.Vol_idVol = Vol_idVol;
-        }
-
-        public int GetTypeAvion_IdTypeAvion()
-        {
-            return this.TypeAvion_IdTypeAvion;
-        }
-
-        public void SetTypeAvion_IdTypeAvion(int TypeAvion_IdTypeAvion)
-        {
-            this.TypeAvion_IdTypeAvion = TypeAvion_IdTypeAvion;
-        }
-
-        public string GetConfiguration()
-        {
-            return this.Configuration;
-        }
-
-        public void SetConfiguration(string Configuration)
-        {
             this.Configuration = Configuration;
-        }
-
-        public string GetTypePneu()
-        {
-            return this.TypePneu;
-        }
-
-        public void SetTypePneu(string TypePneu)
-        {
             this.TypePneu = TypePneu;
-        }
-
-        public bool Getlocation()
-        {
-            return this.Location;
-        }
-
-        public void SetLocation(int Location)
-        {
             this.Location = Location;
-        }
-
-        public DateTime GetHeuresVol()
-        {
-            return this.HeuresVol;
-        }
-
-        public void SetHeuresVol(DateTime HeuresVol)
-        {
             this.HeuresVol = HeuresVol;
         }
 
+        public int IdAvionProperty
+        {
+            get { return IdAvion; }
+            set { IdAvion = value; }
+        }
+        public string ConfigurationProperty
+        {
+            get { return Configuration; }
+            set { Configuration = value; }
+        }
+
+        public string TypePneuProperty
+        {
+            get { return TypePneu; }
+            set { TypePneu = value; }
+        }
+
+        public bool LocationProperty
+        {
+            get { return Location; }
+            set { Location = value; }
+        }
+
+        public DateTime HeuresVolProperty
+        {
+            get { return HeuresVol; }
+            set { HeuresVol = value; }
+        }
     }
 }
