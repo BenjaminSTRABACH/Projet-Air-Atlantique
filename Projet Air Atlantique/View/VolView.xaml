@@ -12,9 +12,7 @@
 		<!--Contenu de la page-->
 
 		<DockPanel HorizontalAlignment="Left" Height="580" LastChildFill="False" VerticalAlignment="Top" Width="1230" Margin="10,10,0,0">
-			<DockPanel DockPanel.Dock="Left" Margin="0,0,0,-0.2" Width="390">
-
-			</DockPanel>
+			<DockPanel DockPanel.Dock="Left" Width="324"/>
 			<Grid>
 
 			</Grid>
@@ -26,7 +24,7 @@
 				</DataGrid.Columns>
 			</DataGrid>
 		</DockPanel>
-		<Button Content="Ajouter un vol" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="59,514,0,0" Height="45"/>
+		<Button Content="Ajouter un vol" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="117,525,0,0" Height="45"/>
 		<DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" VerticalAlignment="Top" Width="100"/>
 	</Grid>
 </UserControl>
