@@ -63,11 +63,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\AeroportController.cs" />
+    <Compile Include="Controllers\AvionController.cs" />
+    <Compile Include="Controllers\BilletController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\FlotteController.cs" />
+    <Compile Include="Controllers\ModeleAvionController.cs" />
+    <Compile Include="Controllers\MotorisationController.cs" />
+    <Compile Include="Controllers\PaysController.cs" />
+    <Compile Include="Controllers\PersonnelController.cs" />
     <Compile Include="Controllers\VolController.cs" />
     <Compile Include="DAL_Model\Mod_Aeroport.cs" />
     <Compile Include="DAL_Model\Mod_Avion.cs" />
     <Compile Include="DAL_Model\Mod_Billet.cs" />
-    <Compile Include="DAL_Model\Mod_Passager.cs" />
+    <Compile Include="DAL_Model\Mod_Client.cs" />
     <Compile Include="DAL_Model\Mod_Personnel.cs" />
     <Compile Include="DAL_Model\Mod_Vol.cs" />
     <Compile Include="DAO_Model\Aeroport.cs" />
