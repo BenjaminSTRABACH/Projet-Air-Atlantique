@@ -23,7 +23,6 @@ namespace Projet_Air_Atlantique.Controllers
         public int IdPaysProperty
         {
             get { return IdPays; }
-            set { IdPays = value; }
         }
 
         public string LibelleProperty

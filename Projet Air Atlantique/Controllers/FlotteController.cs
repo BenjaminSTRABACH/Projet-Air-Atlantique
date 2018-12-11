@@ -20,6 +20,11 @@ namespace Projet_Air_Atlantique.Controllers
             this.Type = Type;
         }
 
+        public int IIdFlotteProperty
+        {
+            get { return IdFlotte; }
+        }
+        
         public string TypeProperty
         {
             get { return Type; }

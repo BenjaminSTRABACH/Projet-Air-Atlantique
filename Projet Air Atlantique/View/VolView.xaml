@@ -26,7 +26,7 @@
 				</DataGrid.Columns>
 			</DataGrid>
 		</DockPanel>
-		<Button Content="Ajouter un vol" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="120,527,0,0" Height="45"/>
+		<Button Content="Ajouter un vol" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="59,514,0,0" Height="45"/>
 		<DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" VerticalAlignment="Top" Width="100"/>
 	</Grid>
 </UserControl>

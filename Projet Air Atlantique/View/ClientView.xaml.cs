@@ -14,33 +14,27 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Projet_Air_Atlantique.Models.DAL;
 using Projet_Air_Atlantique.Controllers;
-using Projet_Air_Atlantique.View;
 
-namespace Projet_Air_Atlantique
+namespace Projet_Air_Atlantique.View
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour ClientView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ClientView : UserControl
     {
-        public MainWindow()
+        Mod_Client mod_client = new Mod_Client();
+        static List<ClientController> list_clients_controllers = new List<ClientController>();
+
+        public ClientView()
         {
             InitializeComponent();
-            
+            mod_client.SelectVolBinders(list_clients_controllers);
+            this.listeClients.ItemsSource = list_clients_controllers;
         }
 
-        private void Vols_Click(object sender, RoutedEventArgs e)
+        private void ListeClients_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            View.Children.Clear();
-            VolView view = new VolView();
-            View.Children.Add(view);
-        }
 
-        private void Clients_Click(object sender, RoutedEventArgs e)
-        {
-            View.Children.Clear();
-            ClientView view = new ClientView();
-            View.Children.Add(view);
         }
     }
 }

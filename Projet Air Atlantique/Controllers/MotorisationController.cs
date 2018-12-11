@@ -20,6 +20,11 @@ namespace Projet_Air_Atlantique.Controllers
             this.Libelle = Libelle;
         }
 
+        public int IdMotorisationProperty
+        {
+            get { return IdMotorisation; }
+        }
+
         public string LibelleProperty
         {
             get { return Libelle; }
