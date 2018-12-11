@@ -39,13 +39,8 @@ namespace Projet_Air_Atlantique
         private void Clients_Click(object sender, RoutedEventArgs e)
         {
             View.Children.Clear();
+            ClientView view = new ClientView();
+            View.Children.Add(view);
         }
-
-        //private void RemoveView()
-        //{
-        //    if (View.Children != null) { 
-        //        View.Children.RemoveAt(0);
-        //    }
-        //}
     }
 }
