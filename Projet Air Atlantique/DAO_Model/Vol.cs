@@ -8,8 +8,6 @@ namespace Projet_Air_Atlantique.Models.DAO
 {
     class Vol
     {
-       // idVol reference   departPrevu arriveePrevue   departEffectif arriveeEffective    etat
-
         private int IdVol;
         private string Reference;
         private DateTime DepartPrevu;

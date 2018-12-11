@@ -66,7 +66,7 @@
 					<ColumnDefinition/>
 				</Grid.ColumnDefinitions>
 				<Image Source="Medias/logoAA_Black.PNG" Width="65" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,-1" Grid.ColumnSpan="2"/>
-				<Button Margin="64,0,251.6,0" Background="#F7F8F7"  FontWeight="Bold"  Height="Auto"  FontFamily="Oswald" Foreground="#333333"  Grid.ColumnSpan="3" Content="Vols"/>
+				<Button Margin="64,0,251.6,0" Background="#F7F8F7"  FontWeight="Bold"  Height="Auto"  FontFamily="Oswald" Foreground="#333333"  Grid.ColumnSpan="3" Content="Vols" Click="Button_Click"/>
 				<Image Source="Medias/plane.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="28.2,18,0,0" Grid.Column="1" Height="30" RenderTransformOrigin="0.041,0.044"/>
 				<Button Margin="0.4,0,252.4,0" Grid.Column="2"  FontWeight="Bold" Foreground="#333333"  FontFamily="Oswald" Background="#F7F8F7" Grid.ColumnSpan="2" Height="Auto" Content="Clients"/>
 				<Image Source="Medias/man-user.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26.2,18,0,0" Grid.Column="2" Height="30" RenderTransformOrigin="0.041,0.044"/>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using MySql.Data.MySqlClient;
 
@@ -8,7 +10,7 @@ namespace Projet_Air_Atlantique.Models.DAL
 {
     class DbConnection
     {
-        private static MySqlConnection connection;
+        private MySqlConnection connection;
         private string server;
         private string database;
         private string uid;
@@ -37,12 +39,12 @@ namespace Projet_Air_Atlantique.Models.DAL
             return connection;
         }
 
-        //Ouverture de la connexion à la base de données
+        //Ouvre la connexion à la base de données
         public bool OpenConnection()
         {
             try
             {
-                connection.Open();
+                this.connection.Open();
                 return true;
             }
             catch (MySqlException ex)
@@ -61,7 +63,7 @@ namespace Projet_Air_Atlantique.Models.DAL
             }
         }
 
-        //Fermeture de la connexion à la base de données
+        //Ferme la connexion à la base de données
         public bool CloseConnection()
         {
             try
