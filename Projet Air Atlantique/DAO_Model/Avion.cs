@@ -25,6 +25,11 @@ namespace Projet_Air_Atlantique.Models.DAO
             this.HeuresVol = HeuresVol;
         }
 
+        public int IdAvionProperty
+        {
+            get { return IdAvion; }
+        }
+
         public string ConfigurationProperty
         {
             get { return Configuration; }

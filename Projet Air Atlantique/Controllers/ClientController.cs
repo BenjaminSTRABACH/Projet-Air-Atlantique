@@ -35,7 +35,6 @@ namespace Projet_Air_Atlantique.Controllers
         public int IdClientProperty
         {
             get { return IdClient; }
-            set { IdClient = value; }
         }
 
         public string NomProperty

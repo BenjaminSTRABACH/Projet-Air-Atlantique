@@ -34,7 +34,6 @@ namespace Projet_Air_Atlantique.Models.DAO
         public int IdClientProperty
         {
             get { return IdClient; }
-            set { IdClient = value; }
         }
 
         public string NomProperty

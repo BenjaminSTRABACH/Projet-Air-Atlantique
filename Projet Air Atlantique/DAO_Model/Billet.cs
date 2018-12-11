@@ -20,6 +20,11 @@ namespace Projet_Air_Atlantique.Models.DAO
             this.Prix = Prix;
         }
 
+        public int IdBilletProperty
+        {
+            get { return IdBillet; }
+        }
+
         public double PrixProperty
         {
             get { return Prix; }

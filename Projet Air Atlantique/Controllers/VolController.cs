@@ -32,6 +32,11 @@ namespace Projet_Air_Atlantique.Controllers
             this.Etat = Etat;
         }
 
+        public int IdVolProperty
+        {
+            get { return IdVol; }
+        }
+
         public string ReferenceProperty
         {
             get { return Reference; }

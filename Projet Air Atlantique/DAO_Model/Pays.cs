@@ -22,7 +22,6 @@ namespace Projet_Air_Atlantique.Models.DAO
         public int IdPaysProperty
         {
             get { return IdPays; }
-            set { IdPays = value; }
         }
 
         public string LibelleProperty
