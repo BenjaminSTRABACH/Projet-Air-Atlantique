@@ -63,19 +63,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\AeroportController.cs" />
+    <Compile Include="Controllers\AvionController.cs" />
+    <Compile Include="Controllers\BilletController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\FlotteController.cs" />
+    <Compile Include="Controllers\ModeleAvionController.cs" />
+    <Compile Include="Controllers\MotorisationController.cs" />
+    <Compile Include="Controllers\PaysController.cs" />
+    <Compile Include="Controllers\PersonnelController.cs" />
+    <Compile Include="Controllers\VolController.cs" />
+    <Compile Include="Controllers\WindowController.cs" />
     <Compile Include="DAL_Model\Mod_Aeroport.cs" />
     <Compile Include="DAL_Model\Mod_Avion.cs" />
     <Compile Include="DAL_Model\Mod_Billet.cs" />
-    <Compile Include="DAL_Model\Mod_Passager.cs" />
+    <Compile Include="DAL_Model\Mod_Client.cs" />
     <Compile Include="DAL_Model\Mod_Personnel.cs" />
     <Compile Include="DAL_Model\Mod_Vol.cs" />
     <Compile Include="DAO_Model\Aeroport.cs" />
     <Compile Include="DAO_Model\Avion.cs" />
     <Compile Include="DAO_Model\Billet.cs" />
-    <Compile Include="DAO_Model\Passager.cs" />
     <Compile Include="DAL_Model\DbConnection.cs" />
+    <Compile Include="DAO_Model\Client.cs" />
+    <Compile Include="DAO_Model\Flotte.cs" />
+    <Compile Include="DAO_Model\ModeleAvion.cs" />
+    <Compile Include="DAO_Model\Motorisation.cs" />
+    <Compile Include="DAO_Model\Pays.cs" />
     <Compile Include="DAO_Model\Personnel.cs" />
     <Compile Include="DAO_Model\Vol.cs" />
+    <Compile Include="View\VolView.xaml.cs">
+      <DependentUpon>VolView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -88,6 +106,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\VolView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -125,10 +147,7 @@
     <Resource Include="Medias\stock.png" />
     <Resource Include="Medias\ticket.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Structure\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Medias\maintenance.png" />
   </ItemGroup>

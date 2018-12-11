@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_Air_Atlantique.Models.DAO
+namespace Projet_Air_Atlantique.Controllers
 {
-    class Billet
+    class BilletController : INotifyPropertyChanged
     {
-
         private int IdBillet;
         private double Prix;
 
-        public Billet() { }
+        public BilletController() { }
 
-        public Billet(int IdBillet, double Prix)
+        public BilletController(int IdBillet, double Prix)
         {
             this.IdBillet = IdBillet;
             this.Prix = Prix;
@@ -26,5 +26,6 @@ namespace Projet_Air_Atlantique.Models.DAO
             set { Prix = value; }
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
