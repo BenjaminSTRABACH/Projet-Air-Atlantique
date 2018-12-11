@@ -14,25 +14,27 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Projet_Air_Atlantique.Models.DAL;
 using Projet_Air_Atlantique.Controllers;
-using Projet_Air_Atlantique.View;
 
-namespace Projet_Air_Atlantique
+namespace Projet_Air_Atlantique.View
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Vols.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VolView : UserControl
     {
-        public MainWindow()
+        Mod_Vol mod_vol = new Mod_Vol();
+        static List<VolController> list_vols_controllers = new List<VolController>();
+
+        public VolView()
         {
             InitializeComponent();
-            
+            mod_vol.SelectVolBinders(list_vols_controllers);
+            this.listeVols.ItemsSource = list_vols_controllers;
         }
 
-        private void Vols_Click(object sender, RoutedEventArgs e)
+        private void ListeVols_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            VolView v = new VolView();
-            Dockpanel.Children.Add(v);
+
         }
     }
 }
