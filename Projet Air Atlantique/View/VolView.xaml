@@ -10,12 +10,23 @@
 
 	<Grid>
 		<!--Contenu de la page-->
-		<DataGrid Name="listeVols" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="10,10,0,10" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeVols_SelectionChanged" Width="1230">
-			<DataGrid.Columns>
-				<DataGridTextColumn Header="Référence" Binding="{Binding ReferenceProperty, Mode=OneWay}" />
-				<DataGridTextColumn Header="Départ Prevu" Binding="{Binding DepartPrevuProperty, Mode=TwoWay}" />
-				<DataGridTextColumn Header="Arrivée Prevue" Binding="{Binding ArriveePrevueProperty, Mode=TwoWay}" />
-			</DataGrid.Columns>
-		</DataGrid>
+
+		<DockPanel HorizontalAlignment="Left" Height="580" LastChildFill="False" VerticalAlignment="Top" Width="1230" Margin="10,10,0,0">
+			<DockPanel DockPanel.Dock="Left" Margin="0,0,0,-0.2" Width="390">
+
+			</DockPanel>
+			<Grid>
+
+			</Grid>
+			<DataGrid Name="listeVols" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="10,65,0,10" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeVols_SelectionChanged" Width="1230">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Référence" Binding="{Binding ReferenceProperty, Mode=OneWay}" />
+					<DataGridTextColumn Header="Départ Prevu" Binding="{Binding DepartPrevuProperty, Mode=TwoWay}" />
+					<DataGridTextColumn Header="Arrivée Prevue" Binding="{Binding ArriveePrevueProperty, Mode=TwoWay}" />
+				</DataGrid.Columns>
+			</DataGrid>
+		</DockPanel>
+		<Button Content="Ajouter un vol" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="120,527,0,0" Height="45"/>
+		<DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" VerticalAlignment="Top" Width="100"/>
 	</Grid>
 </UserControl>

@@ -31,13 +31,21 @@ namespace Projet_Air_Atlantique
 
         private void Vols_Click(object sender, RoutedEventArgs e)
         {
-            VolView v = new VolView();
-            Dockpanel.Children.Add(v);
+            View.Children.Clear();
+            VolView view = new VolView();
+            View.Children.Add(view);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Clients_Click(object sender, RoutedEventArgs e)
         {
-
+            View.Children.Clear();
         }
+
+        //private void RemoveView()
+        //{
+        //    if (View.Children != null) { 
+        //        View.Children.RemoveAt(0);
+        //    }
+        //}
     }
 }
