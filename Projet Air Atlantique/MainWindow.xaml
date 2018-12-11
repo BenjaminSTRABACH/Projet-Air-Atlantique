@@ -76,6 +76,6 @@
 				<Image Source="Medias/maintenance.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,18,0,0" Grid.Column="4" Height="30" RenderTransformOrigin="0.041,0.044"/>
 			</Grid>
 		</Grid>
-		<DockPanel Name="View" HorizontalAlignment="Left" Height="606" LastChildFill="False" Margin="10,74,0,0" VerticalAlignment="Top" Width="1254"/>
-	</Grid>
+        <DockPanel Name="View" HorizontalAlignment="Left" Height="606" LastChildFill="False" Margin="10,74,0,0" VerticalAlignment="Top" Width="1254"/>
+    </Grid>
 </Window>
