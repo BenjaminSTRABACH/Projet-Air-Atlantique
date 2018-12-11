@@ -11,21 +11,23 @@
         <!--Contenu de la page-->
 
         <DockPanel HorizontalAlignment="Left" Height="580" LastChildFill="False" VerticalAlignment="Top" Width="1230" Margin="10,10,0,0">
-            <DockPanel DockPanel.Dock="Left" Margin="0,0,0,-0.2" Width="390">
-
-            </DockPanel>
+            <DockPanel DockPanel.Dock="Left" Margin="0,0,0,-0.2" Width="0"/>
             <Grid>
 
             </Grid>
-            <DataGrid Name="listeVols" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="10,65,0,10" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeVols_SelectionChanged" Width="1230">
+            <DataGrid Name="listeClients" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Right" Margin="10,65,0,10" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeClients_SelectionChanged" Width="1220" DockPanel.Dock="Right">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Référence" Binding="{Binding ReferenceProperty, Mode=OneWay}" />
-                    <DataGridTextColumn Header="Départ Prevu" Binding="{Binding DepartPrevuProperty, Mode=TwoWay}" />
-                    <DataGridTextColumn Header="Arrivée Prevue" Binding="{Binding ArriveePrevueProperty, Mode=TwoWay}" />
+                    <DataGridTextColumn Header="Nom" Binding="{Binding NomProperty, Mode=TwoWay}" />
+                    <DataGridTextColumn Header="Prenom" Binding="{Binding PrenomProperty, Mode=TwoWay}" />
+                    <DataGridTextColumn Header="Genre" Binding="{Binding GenreProperty, Mode=TwoWay}" />
+                    <DataGridTextColumn Header="DateNaissance" Binding="{Binding DateNaissanceProperty, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="PointsFidelite" Binding="{Binding PointsFideliteProperty, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Tel" Binding="{Binding TelProperty, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Mail" Binding="{Binding MailProperty, Mode=TwoWay}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </DockPanel>
-        <Button Content="Ajouter un vol" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="59,514,0,0" Height="45"/>
+        <Button Content="Ajouter un client" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="936,475,-404,-70.4" Height="45" Background="#FF090D5C" BorderBrush="#FF090D5C"/>
         <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </UserControl>

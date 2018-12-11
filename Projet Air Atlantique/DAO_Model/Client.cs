@@ -11,7 +11,7 @@ namespace Projet_Air_Atlantique.Models.DAO
         private int IdClient;
         private string Nom;
         private string Prenom;
-        private bool Genre;
+        private char Genre;
         private DateTime DateNaissance;
         private int PointsFidelite;
         private int Tel;
@@ -19,7 +19,7 @@ namespace Projet_Air_Atlantique.Models.DAO
 
         public Client() { }
 
-        public Client(int IdClient, string Nom, string Prenom, bool Genre, DateTime DateNaissance, int PointsFidelite, int Tel, string Mail)
+        public Client(int IdClient, string Nom, string Prenom, char Genre, DateTime DateNaissance, int PointsFidelite, int Tel, string Mail)
         {
             this.IdClient = IdClient;
             this.Nom = Nom;
@@ -29,11 +29,6 @@ namespace Projet_Air_Atlantique.Models.DAO
             this.PointsFidelite = PointsFidelite;
             this.Tel = Tel;
             this.Mail = Mail;
-        }
-
-        public int IdClientProperty
-        {
-            get { return IdClient; }
         }
 
         public string NomProperty
@@ -48,7 +43,7 @@ namespace Projet_Air_Atlantique.Models.DAO
             set { Prenom = value; }
         }
 
-        public bool GenreProperty
+        public char GenreProperty
         {
             get { return Genre; }
             set { Genre = value; }
@@ -60,11 +55,11 @@ namespace Projet_Air_Atlantique.Models.DAO
             set { DateNaissance = value; }
         }
 
-        public int GetPointsFideliteProperty()
-        { return PointsFidelite; }
-
-        public void SetPointsFideliteProperty(int value)
-        { PointsFidelite = value; }
+        public int PointsFideliteProperty
+        {
+            get { return PointsFidelite; }
+            set { PointsFidelite = value; }
+        }
 
         public int TelProperty
         {

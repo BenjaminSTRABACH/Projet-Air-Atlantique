@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Projet_Air_Atlantique.Models.DAL;
+using Projet_Air_Atlantique.Controllers;
 
 namespace Projet_Air_Atlantique.View
 {
@@ -20,9 +22,19 @@ namespace Projet_Air_Atlantique.View
     /// </summary>
     public partial class ClientView : UserControl
     {
+        Mod_Client mod_client = new Mod_Client();
+        static List<ClientController> list_clients_controllers = new List<ClientController>();
+
         public ClientView()
         {
             InitializeComponent();
+            mod_client.SelectVolBinders(list_clients_controllers);
+            this.listeClients.ItemsSource = list_clients_controllers;
+        }
+
+        private void ListeClients_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

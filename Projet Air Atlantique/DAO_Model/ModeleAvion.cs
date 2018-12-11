@@ -18,11 +18,6 @@ namespace Projet_Air_Atlantique.DAO_Model
             this.Libelle = Libelle;
         }
 
-        public int IdModeleAvionProperty
-        {
-            get { return IdModeleAvion; }
-        }
-
         public string LibelleProperty
         {
             get { return Libelle; }

@@ -19,11 +19,6 @@ namespace Projet_Air_Atlantique.DAO_Model
             this.Type = Type;
         }
 
-        public int IdFlotteProperty
-        {
-            get { return IdFlotte; }
-        }
-
         public string TypeProperty
         {
             get { return Type; }

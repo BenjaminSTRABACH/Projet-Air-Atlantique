@@ -23,11 +23,6 @@ namespace Projet_Air_Atlantique.Models.DAO
             this.CodeAITA = CodeAITA;
         }
 
-        public int IdAeroportProperty
-        {
-            get { return IdAeroport; }
-        }
-
         public string NomProperty
         {
             get { return Nom; }

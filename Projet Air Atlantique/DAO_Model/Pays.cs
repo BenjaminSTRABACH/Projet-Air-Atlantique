@@ -19,11 +19,6 @@ namespace Projet_Air_Atlantique.Models.DAO
             this.Libelle = Libelle;
         }
 
-        public int IdPaysProperty
-        {
-            get { return IdPays; }
-        }
-
         public string LibelleProperty
         {
             get { return Libelle; }
