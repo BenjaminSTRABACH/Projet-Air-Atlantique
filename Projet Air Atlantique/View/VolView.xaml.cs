@@ -27,6 +27,7 @@ namespace Projet_Air_Atlantique.View
 
         public VolView()
         {
+            List<VolController> list_vols_controllers = new List<VolController>();
             InitializeComponent();
             mod_vol.SelectVolBinders(list_vols_controllers);
             this.listeVols.ItemsSource = list_vols_controllers;
