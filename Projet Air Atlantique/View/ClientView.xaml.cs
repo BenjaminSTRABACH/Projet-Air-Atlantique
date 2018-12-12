@@ -27,8 +27,9 @@ namespace Projet_Air_Atlantique.View
 
         public ClientView()
         {
+            List<ClientController> list_clients_controllers = new List<ClientController>();
             InitializeComponent();
-            mod_client.SelectVolBinders(list_clients_controllers);
+            mod_client.SelectClientBinders(list_clients_controllers);
             this.listeClients.ItemsSource = list_clients_controllers;
         }
 

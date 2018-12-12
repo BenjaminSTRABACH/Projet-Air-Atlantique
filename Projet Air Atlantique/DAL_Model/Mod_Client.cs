@@ -18,7 +18,7 @@ namespace Projet_Air_Atlantique.Models.DAL
         }
 
         //Liste des clients
-        public void SelectVolBinders(List<ClientController> list)
+        public void SelectClientBinders(List<ClientController> list)
         {
             string query = "SELECT * FROM client;";
             connect.OpenConnection();
@@ -32,6 +32,14 @@ namespace Projet_Air_Atlantique.Models.DAL
                 list.Add(contr);
             }
             reader.Close();
+        }
+
+        public void AddClientBinders()
+        {
+            string query = "INSERT INTO client (nom, prenom, genre, dateNaissance, pointsFidelite, tel, mail) VALUES (@nom, @prenom, @genre, @dateNaissance, @pointsFidelite, @tel, @mail)";
+            connect.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+
         }
 
     }
