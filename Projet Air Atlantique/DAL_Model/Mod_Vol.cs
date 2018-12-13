@@ -20,7 +20,8 @@ namespace Projet_Air_Atlantique.Models.DAL
         //Liste des vols
         public void SelectVolBinders(List<VolController> list)
         {
-            string query = "SELECT * FROM vol;";
+            //string query = "SELECT idVol, reference, departPrevu, arriveePrevue, departEffectif, arriveeEffective, etat, aeroport.ville FROM vol JOIN aeroport WHERE vol.AeroportDepart_idAeroport = aeroport.idAeroport";
+            string query = "SELECT * FROM vol";
             connect.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
             cmd.ExecuteNonQuery();

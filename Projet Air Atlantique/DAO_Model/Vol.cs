@@ -15,10 +15,13 @@ namespace Projet_Air_Atlantique.Models.DAO
         private DateTime DepartEffectif;
         private DateTime ArriveeEffective;
         private string Etat;
+        private int AeroportDepart;
+        private int AeroportArriveePrevu;
+        private int AeroportArriveeEffectif;
 
         public Vol() { }
 
-        public Vol(int IdVol, string Reference, DateTime DepartPrevu, DateTime ArriveePrevue, DateTime DepartEffectif, DateTime ArriveeEffective, string Etat)
+        public Vol(int IdVol, string Reference, DateTime DepartPrevu, DateTime ArriveePrevue, DateTime DepartEffectif, DateTime ArriveeEffective, string Etat, int AeroportDepart, int AeroportArriveePrevu, int AeroportArriveeEffectif)
         {
             this.IdVol = IdVol;
             this.Reference = Reference;
@@ -27,7 +30,9 @@ namespace Projet_Air_Atlantique.Models.DAO
             this.DepartEffectif = DepartEffectif;
             this.ArriveeEffective = ArriveeEffective;
             this.Etat = Etat;
-
+            this.AeroportDepart = AeroportDepart;
+            this.AeroportArriveePrevu = AeroportArriveePrevu;
+            this.AeroportArriveeEffectif = AeroportArriveeEffectif;
         }
 
         public string ReferenceProperty

@@ -12,15 +12,38 @@
 		<!--Contenu de la page-->
 
 		<DockPanel HorizontalAlignment="Left" Height="580" LastChildFill="False" VerticalAlignment="Top" Width="1230" Margin="10,10,0,0">
-			<DockPanel DockPanel.Dock="Left" Width="324"/>
-			<Grid>
-
-			</Grid>
-			<DataGrid Name="listeVols" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="10,65,0,10" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeVols_SelectionChanged" Width="1230">
+			<DockPanel DockPanel.Dock="Left" Width="324" >
+				<Border />
+			</DockPanel>
+			<DockPanel DockPanel.Dock="Top" Height="40" Margin="0,0,0.4,0">
+				<TextBox DockPanel.Dock="Left" Margin="10,0,0,-10.4" Text="Référence" HorizontalAlignment="Left" Width="auto" Height="40" VerticalAlignment="Top"/>
+				<TextBox DockPanel.Dock="Left" Margin="10,0,0,-10.4" Text="Aéroport de départ" HorizontalAlignment="Left" Width="auto" Height="40" VerticalAlignment="Top"/>
+				<TextBox DockPanel.Dock="Left" Margin="10,0,0,-10.4" Text="Aéroport d'arrivée" HorizontalAlignment="Left" Width="auto" Height="40" VerticalAlignment="Top"/>
+				<ComboBox DockPanel.Dock="Left" Margin="10,0,0,-10.4" Text="Etat" HorizontalAlignment="Left" Width="100" Height="40" VerticalAlignment="Top">
+					<ComboBoxItem>
+						<TextBlock Foreground="Green">Planifié</TextBlock>
+					</ComboBoxItem>
+					<ComboBoxItem>
+						<TextBlock Foreground="Orange">Retard</TextBlock>
+					</ComboBoxItem>
+					<ComboBoxItem>
+						<TextBlock Foreground="Red">Annulé</TextBlock>
+					</ComboBoxItem>
+					<ComboBoxItem>
+						<TextBlock Foreground="LightBlue">En cours</TextBlock>
+					</ComboBoxItem>
+					<ComboBoxItem>
+						<TextBlock Foreground="Gray">Passé</TextBlock>
+					</ComboBoxItem>
+				</ComboBox>
+				<Button DockPanel.Dock="Left" Margin="10,0,0,-10.4" Content="Rechercher" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110"/>
+			</DockPanel>
+			<DataGrid Name="listeVols" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="10,5.4,0,10" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeVols_SelectionChanged" Width="884">
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Référence" Binding="{Binding ReferenceProperty, Mode=OneWay}" />
 					<DataGridTextColumn Header="Départ Prevu" Binding="{Binding DepartPrevuProperty, Mode=TwoWay}" />
 					<DataGridTextColumn Header="Arrivée Prevue" Binding="{Binding ArriveePrevueProperty, Mode=TwoWay}" />
+					<DataGridTextColumn Header="Etat" Binding="{Binding EtatProperty, Mode=OneWay}" />
 				</DataGrid.Columns>
 			</DataGrid>
 		</DockPanel>
