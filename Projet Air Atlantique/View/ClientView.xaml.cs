@@ -37,5 +37,10 @@ namespace Projet_Air_Atlantique.View
         {
 
         }
+
+        private void Ajout_client_click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
