@@ -27,8 +27,8 @@ namespace Projet_Air_Atlantique.View
 
         public ClientView()
         {
-            List<ClientController> list_clients_controllers = new List<ClientController>();
             InitializeComponent();
+            List<ClientController> list_clients_controllers = new List<ClientController>();
             mod_client.SelectClientBinders(list_clients_controllers);
             this.listeClients.ItemsSource = list_clients_controllers;
         }
@@ -40,7 +40,19 @@ namespace Projet_Air_Atlantique.View
 
         private void Ajout_client_click(object sender, RoutedEventArgs e)
         {
+            string nom = nom_client.Text;
+            string prenom = prenom_client.Text;
+            int tel = Convert.ToInt32(tel_client.Text);
+            string mail = mail_client.Text;
+            DateTime date_naissance = dateN_client.DisplayDate;
+            char genre = 'H' ;
+            if (F.IsChecked == true)
+            {
+                genre = 'F';
+            }
 
+            ClientController CC = new ClientController(0, nom, prenom, genre, date_naissance , 0, tel, mail);
+            mod_client.AddClientBinders(CC);
         }
     }
 }

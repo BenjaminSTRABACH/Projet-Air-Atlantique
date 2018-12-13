@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using MySql.Data.MySqlClient;
 using Projet_Air_Atlantique.Controllers;
 
@@ -34,11 +35,23 @@ namespace Projet_Air_Atlantique.Models.DAL
             reader.Close();
         }
 
-        public void AddClientBinders()
+        public void AddClientBinders(ClientController c)
         {
             string query = "INSERT INTO client (nom, prenom, genre, dateNaissance, pointsFidelite, tel, mail) VALUES (@nom, @prenom, @genre, @dateNaissance, @pointsFidelite, @tel, @mail)";
-            connect.OpenConnection();
             MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+            cmd.Parameters.AddWithValue("@nom", c.NomProperty);
+            cmd.Parameters.AddWithValue("@prenom", c.PrenomProperty);
+            cmd.Parameters.AddWithValue("@genre", c.GenreProperty);
+            cmd.Parameters.AddWithValue("@dateNaissance", c.DateNaissanceProperty);
+            cmd.Parameters.AddWithValue("@pointsFidelite", c.PointsFideliteProperty);
+            cmd.Parameters.AddWithValue("@tel", c.TelProperty);
+            cmd.Parameters.AddWithValue("@mail", c.MailProperty);
+            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
+            cmd.ExecuteNonQuery();
+        }
+
+        public void UpdateClientBinders()
+        {
 
         }
 
