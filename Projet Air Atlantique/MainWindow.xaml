@@ -15,67 +15,71 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
-	<Window.Resources>
-		<Style TargetType="{x:Type materialDesign:Card}">
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type materialDesign:Card}">
-						<ControlTemplate.Resources>
-							<Converters:ShadowEdgeConverter x:Key="ShadowEdgeConverter"/>
-						</ControlTemplate.Resources>
-						<Grid Background="Transparent">
-							<AdornerDecorator CacheMode="{Binding (materialDesign:ShadowAssist.CacheMode), RelativeSource={RelativeSource Self}}">
-								<Border CornerRadius="{TemplateBinding UniformCornerRadius}">
-									<Border.Effect>
-										<Binding Path="(materialDesign:ShadowAssist.ShadowDepth)" RelativeSource="{RelativeSource TemplatedParent}">
-											<Binding.Converter>
-												<Converters:ShadowConverter/>
-											</Binding.Converter>
-										</Binding>
-									</Border.Effect>
-									<Border x:Name="PART_ClipBorder" Background="{TemplateBinding Background}" Clip="{TemplateBinding ContentClip}" Padding="{TemplateBinding Padding}"/>
-								</Border>
-							</AdornerDecorator>
-							<ContentPresenter x:Name="ContentPresenter" Clip="{TemplateBinding ContentClip}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Margin="{TemplateBinding Padding}"/>
-						</Grid>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-			<Setter Property="Background" Value="{DynamicResource MaterialDesignCardBackground}"/>
-			<Setter Property="VerticalAlignment" Value="Top"/>
-			<Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth2"/>
-			<Setter Property="Focusable" Value="False"/>
-		</Style>
-	</Window.Resources>
-	<!--Ecran-->
-	<Grid>
-		<!--Header-->
-		<Grid Margin="0,0,-0.6,0" Height="69" VerticalAlignment="Top" Background="#2f2f31">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto" MinHeight="6" />
-				<RowDefinition/>
-			</Grid.RowDefinitions>
-			<Rectangle Fill="#2f2f31" StrokeThickness="3" />
-			<!--Menu-->
-			<Grid Margin="0,6,-0.2,-0.2" Height="auto" Grid.RowSpan="2">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="65"/>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
-				</Grid.ColumnDefinitions>
-				<Image Source="Medias/logoAA_Black.PNG" Width="65" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,-1" Grid.ColumnSpan="2"/>
-				<Button Margin="64,0,301.6,0" Background="#F7F8F7"  FontWeight="Bold"  Height="Auto"  FontFamily="Oswald" Foreground="#333333"  Grid.ColumnSpan="3" Content="Vols" Click="Vols_Click"/>
-				<Image Source="Medias/plane.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="28.2,18,0,0" Grid.Column="1" Height="30" RenderTransformOrigin="0.041,0.044"/>
-				<Button Margin="0.8,0,302,0" Grid.Column="2"  FontWeight="Bold" Foreground="#333333"  FontFamily="Oswald" Background="#F7F8F7" Grid.ColumnSpan="2" Height="Auto" Content="Clients" Click="Clients_Click"/>
-				<Image Source="Medias/man-user.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26.2,18,0,0" Grid.Column="2" Height="30" RenderTransformOrigin="0.041,0.044"/>
-				<Button Grid.Column="3" Background="#F7F8F7"  FontWeight="Bold" Foreground="#333333"   FontFamily="Oswald" Height="Auto"  Margin="0.4,0,0,0" Content="Billets"/>
-				<Image Source="Medias/ticket.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,18,0,0" Grid.Column="3" Height="30" RenderTransformOrigin="0.041,0.044"/>
-				<Button Margin="0,0,0.4,0" Grid.Column="4" FontWeight="Bold" Foreground="#333333" FontFamily="Oswald" Background="#F7F8F7" Height="Auto" Content="Maintenance"/>
-				<Image Source="Medias/maintenance.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,18,0,0" Grid.Column="4" Height="30" RenderTransformOrigin="0.041,0.044"/>
-			</Grid>
-		</Grid>
-        <DockPanel Name="View" HorizontalAlignment="Left" Height="606" LastChildFill="False" Margin="10,74,0,0" VerticalAlignment="Top" Width="1254"/>
+    <Window.Resources>
+        <Style TargetType="{x:Type materialDesign:Card}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type materialDesign:Card}">
+                        <ControlTemplate.Resources>
+                            <Converters:ShadowEdgeConverter x:Key="ShadowEdgeConverter"/>
+                        </ControlTemplate.Resources>
+                        <Grid Background="Transparent">
+                            <AdornerDecorator CacheMode="{Binding (materialDesign:ShadowAssist.CacheMode), RelativeSource={RelativeSource Self}}">
+                                <Border CornerRadius="{TemplateBinding UniformCornerRadius}">
+                                    <Border.Effect>
+                                        <Binding Path="(materialDesign:ShadowAssist.ShadowDepth)" RelativeSource="{RelativeSource TemplatedParent}">
+                                            <Binding.Converter>
+                                                <Converters:ShadowConverter/>
+                                            </Binding.Converter>
+                                        </Binding>
+                                    </Border.Effect>
+                                    <Border x:Name="PART_ClipBorder" Background="{TemplateBinding Background}" Clip="{TemplateBinding ContentClip}" Padding="{TemplateBinding Padding}"/>
+                                </Border>
+                            </AdornerDecorator>
+                            <ContentPresenter x:Name="ContentPresenter" Clip="{TemplateBinding ContentClip}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="{DynamicResource MaterialDesignCardBackground}"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth2"/>
+            <Setter Property="Focusable" Value="False"/>
+        </Style>
+    </Window.Resources>
+    <!--Ecran-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="659*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+        <!--Header-->
+        <Grid Margin="0,0,-0.4,0" Height="69" VerticalAlignment="Top" Background="#2f2f31">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="6" />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle Fill="#2f2f31" StrokeThickness="3" />
+            <!--Menu-->
+            <Grid Margin="0,6,-0.2,-0.2" Height="auto" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Medias/logoAA_Black.PNG" Width="65" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,-1" Grid.ColumnSpan="2"/>
+                <Button Margin="64,0,301.6,0" Background="#F7F8F7"  FontWeight="Bold"  Height="Auto"  FontFamily="Oswald" Foreground="#333333"  Grid.ColumnSpan="3" Content="Vols" Click="Vols_Click"/>
+                <Image Source="Medias/plane.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="28.2,18,0,0" Grid.Column="1" Height="30" RenderTransformOrigin="0.041,0.044"/>
+                <Button Margin="0.8,0,302,0" Grid.Column="2"  FontWeight="Bold" Foreground="#333333"  FontFamily="Oswald" Background="#F7F8F7" Grid.ColumnSpan="2" Height="Auto" Content="Clients" Click="Clients_Click"/>
+                <Image Source="Medias/man-user.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26.2,18,0,0" Grid.Column="2" Height="30" RenderTransformOrigin="0.041,0.044"/>
+                <Button Grid.Column="3" Background="#F7F8F7"  FontWeight="Bold" Foreground="#333333"   FontFamily="Oswald" Height="Auto"  Margin="0.4,0,0,0" Content="Billets"/>
+                <Image Source="Medias/ticket.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="27,18,0,0" Grid.Column="3" Height="30" RenderTransformOrigin="0.041,0.044"/>
+                <Button Margin="0,0,0.4,0" Grid.Column="4" FontWeight="Bold" Foreground="#333333" FontFamily="Oswald" Background="#F7F8F7" Height="Auto" Content="Maintenance"/>
+                <Image Source="Medias/maintenance.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,18,0,0" Grid.Column="4" Height="30" RenderTransformOrigin="0.041,0.044"/>
+            </Grid>
+        </Grid>
+        <DockPanel Name="View" HorizontalAlignment="Stretch" Height="621" LastChildFill="False" Margin="0,69,-0.4,0" VerticalAlignment="Top" Width="1274" Grid.RowSpan="2"/>
     </Grid>
 </Window>

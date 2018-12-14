@@ -26,7 +26,8 @@ namespace Projet_Air_Atlantique
         public MainWindow()
         {
             InitializeComponent();
-            
+            AccueilView view = new AccueilView();
+            View.Children.Add(view);
         }
 
         private void Vols_Click(object sender, RoutedEventArgs e)

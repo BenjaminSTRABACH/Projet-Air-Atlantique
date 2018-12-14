@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Projet_Air_Atlantique.View.AccueilView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:date="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Projet_Air_Atlantique.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1250" Background="White">
+    <Grid Margin="10,0,-0.4,0">
+        <DockPanel Height="624" LastChildFill="False" VerticalAlignment="Top" Margin="-28,0,-59,-24">
+            <Image Source="/Medias/AA_bkg.jpg" Width="1352" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-17,0,0" Grid.Column="3" Height="641" RenderTransformOrigin="0.041,0.044"/>
+        </DockPanel>
+    </Grid>
+</UserControl>
