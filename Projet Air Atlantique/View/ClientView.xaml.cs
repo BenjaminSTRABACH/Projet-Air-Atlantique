@@ -45,14 +45,15 @@ namespace Projet_Air_Atlantique.View
             int tel = Convert.ToInt32(tel_client.Text);
             string mail = mail_client.Text;
             DateTime date_naissance = dateN_client.DisplayDate;
+
             char genre = 'H' ;
             if (F.IsChecked == true)
             {
                 genre = 'F';
             }
 
-            ClientController CC = new ClientController(0, nom, prenom, genre, date_naissance , 0, tel, mail);
-            mod_client.AddClientBinders(CC);
+            ClientController clientController = new ClientController(0, nom, prenom, genre, date_naissance , 0, tel, mail);
+            mod_client.AddClientBinders(clientController);
         }
     }
 }

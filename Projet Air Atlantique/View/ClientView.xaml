@@ -27,15 +27,14 @@
             </Grid>
         </DockPanel>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="515" Margin="841,30,0,0" VerticalAlignment="Top" Width="368" Background="#FFE5E0DF"/>
-        <TextBlock Text="NOUVEAU CLIENT" Margin="846,46,31,533" FontSize="14" FontWeight="ExtraBold" FontFamily="Roboto"/>
+        <TextBlock Text="NOUVEAU CLIENT" Margin="970,45,147,534" FontSize="14" FontWeight="ExtraBold" FontFamily="Roboto"/>
         <TextBox Margin="859,151,0,416" Text="Nom" HorizontalAlignment="Left" Width="330" FontFamily="Roboto" Name="nom_client"/>
         <TextBox Margin="859,89,0,478" Text="Prénom" HorizontalAlignment="Left" Width="330" Height="32.8" FontFamily="Roboto" Name="prenom_client"/>
         <TextBlock HorizontalAlignment="Left" Width="330" Margin="862,226,0,351" Text="Genre" FontFamily="Roboto"/>
         <RadioButton x:Name="H" Margin="862,255,235,326" GroupName="Genre" Content="Homme" FontFamily="Roboto"/>
         <RadioButton x:Name="F" Margin="1011,255,51,326" GroupName="Genre" Content="Femme" FontFamily="Roboto"/>
-        <DatePicker FontFamily="Roboto" SelectedDateFormat="Long" SelectedDate="{x:Static date:DateTime.Now }"
-                  DisplayDateStart="1/01/1945" DisplayDateEnd="{x:Static date:DateTime.Now }"
-                  FirstDayOfWeek="Monday" Margin="859,294,51,278" DisplayDate="2018-12-13" Text="Date de naissance" Name="dateN_client"/>
+        <DatePicker FontFamily="Roboto" SelectedDateFormat="Short" SelectedDate="{x:Static date:DateTime.Now }"
+                  FirstDayOfWeek="Monday" Margin="859,294,51,278" Name="dateN_client"/>
         <TextBox Text="{Binding PhoneNumber, StringFormat={}{0:(###)###-####}}" Margin="862,343,51,231" FontFamily="Roboto" Name="tel_client"/>
         <TextBox Text="Mail" Margin="862,394,51,180" FontFamily="Roboto" Name="mail_client"/>
         <Button Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="146" Margin="947,468,0,0" Height="45" Background="#FF090D5C" BorderBrush="#FF090D5C" Click="Ajout_client_click"/>

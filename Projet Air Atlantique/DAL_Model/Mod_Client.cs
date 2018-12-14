@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +22,8 @@ namespace Projet_Air_Atlantique.Models.DAL
         //Liste des clients
         public void SelectClientBinders(List<ClientController> list)
         {
-            string query = "SELECT * FROM client;";
             connect.OpenConnection();
+            string query = "SELECT * FROM client;";
             MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -33,10 +34,12 @@ namespace Projet_Air_Atlantique.Models.DAL
                 list.Add(contr);
             }
             reader.Close();
+            connect.CloseConnection();
         }
 
         public void AddClientBinders(ClientController c)
         {
+            connect.OpenConnection();
             string query = "INSERT INTO client (nom, prenom, genre, dateNaissance, pointsFidelite, tel, mail) VALUES (@nom, @prenom, @genre, @dateNaissance, @pointsFidelite, @tel, @mail)";
             MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
             cmd.Parameters.AddWithValue("@nom", c.NomProperty);
@@ -48,11 +51,25 @@ namespace Projet_Air_Atlantique.Models.DAL
             cmd.Parameters.AddWithValue("@mail", c.MailProperty);
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
+            connect.CloseConnection();
         }
 
-        public void UpdateClientBinders()
+        public static void UpdateClientBinders(ClientController c)
         {
-
+            connect.OpenConnection();
+            string query = "UPDATE `client` SET `nom` = @nom, `prenom` = @prenom, `genre` = @genre, `dateNaissance` = @dateNaissance, `pointsFidelite` = @pointsFidelite, `tel` = @tel, `mail` = @mail WHERE `client`.`idClient` = @idClient;";
+            MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+            cmd.Parameters.AddWithValue("@nom", c.NomProperty);
+            cmd.Parameters.AddWithValue("@prenom", c.PrenomProperty);
+            cmd.Parameters.AddWithValue("@genre", c.GenreProperty);
+            cmd.Parameters.AddWithValue("@dateNaissance", c.DateNaissanceProperty);
+            cmd.Parameters.AddWithValue("@pointsFidelite", c.PointsFideliteProperty);
+            cmd.Parameters.AddWithValue("@tel", c.TelProperty);
+            cmd.Parameters.AddWithValue("@mail", c.MailProperty);
+            cmd.Parameters.AddWithValue("@idClient", c.IdClientProperty);
+            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
+            cmd.ExecuteNonQuery();
+            connect.CloseConnection();
         }
 
     }
