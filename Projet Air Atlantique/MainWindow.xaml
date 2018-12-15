@@ -50,8 +50,8 @@
     <!--Ecran-->
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="659*"/>
-            <RowDefinition Height="32*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
         <!--Header-->
         <Grid Margin="0,0,-0.4,0" Height="69" VerticalAlignment="Top" Background="#2f2f31">
@@ -80,6 +80,6 @@
                 <Image Source="Medias/maintenance.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,18,0,0" Grid.Column="4" Height="30" RenderTransformOrigin="0.041,0.044"/>
             </Grid>
         </Grid>
-        <DockPanel Name="View" HorizontalAlignment="Stretch" Height="621" LastChildFill="False" Margin="0,69,-0.4,0" VerticalAlignment="Top" Width="1274" Grid.RowSpan="2"/>
+        <DockPanel Name="View" HorizontalAlignment="Stretch" Height="621" LastChildFill="False" Margin="0,69,-0.4,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

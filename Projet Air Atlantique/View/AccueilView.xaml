@@ -8,8 +8,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1250" Background="White">
     <Grid Margin="10,0,-0.4,0">
-        <DockPanel Height="624" LastChildFill="False" VerticalAlignment="Top" Margin="-28,0,-59,-24">
-            <Image Source="/Medias/AA_bkg.jpg" Width="1352" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-17,0,0" Grid.Column="3" Height="641" RenderTransformOrigin="0.041,0.044"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="463*"/>
+            <RowDefinition Height="137*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Height="624" LastChildFill="False" VerticalAlignment="Top" Margin="-28,0,-59,-24" Grid.RowSpan="3">
+            <Image Source="/Medias/AA_bkg.jpg" Width="1352" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-17,0,0" Grid.Column="3" Height="641" RenderTransformOrigin="-0.008,0.05"/>
+        </DockPanel>
+        <DockPanel Margin="0,0,0,10" Grid.RowSpan="2">
+            <TextBlock Height="122" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" FontFamily="Oswald" Margin="0,33,0,0" Width="484" Foreground="#FF041B52"><Run Text="AIR ATLANTIQUE"/><LineBreak/><Run/></TextBlock>
+        </DockPanel>
+        <DockPanel Grid.RowSpan="2">
+            <TextBlock Height="98" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="60" FontWeight="Regular" FontFamily="Oswald" Width="618" Foreground="#FF041B52" Margin="0,0,0,371"><Run Text="Le monde vous appartiendra"/><LineBreak/><Run/></TextBlock>
+        </DockPanel>
+        <DockPanel Grid.RowSpan="2" Margin="-54,0,0,0">
+            <Border Background="#FF2B2B2B" Margin="0,550,0,0" Width="1373"></Border>
+        </DockPanel>
+        <DockPanel Margin="-54,0,0,0" Grid.RowSpan="2">
+            <TextBlock Text="Adresse : 42 rue du Triangle des Bermudes - Tél: 02 40 76 60 87 - Mail : contact@air-atlantique.fr" Foreground="White" Margin="0,567,0,0" Width="1140" FontWeight="Bold"></TextBlock>
         </DockPanel>
     </Grid>
 </UserControl>
