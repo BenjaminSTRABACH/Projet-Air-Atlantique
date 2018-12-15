@@ -20,7 +20,7 @@
             <TextBlock Height="122" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="80" FontFamily="Oswald" Margin="0,33,0,0" Width="484" Foreground="#FF041B52"><Run Text="AIR ATLANTIQUE"/><LineBreak/><Run/></TextBlock>
         </DockPanel>
         <DockPanel Grid.RowSpan="2">
-            <TextBlock Height="98" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="60" FontWeight="Regular" FontFamily="Oswald" Width="618" Foreground="#FF041B52" Margin="0,0,0,371"><Run Text="Le monde vous appartiendra"/><LineBreak/><Run/></TextBlock>
+            <TextBlock Height="98" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="60" FontWeight="Regular" FontFamily="Oswald" Width="563" Foreground="#FF041B52" Margin="0,0,0,371"><Run Text="Le monde vous appartien"/><Run Text="t"/><LineBreak/><Run/></TextBlock>
         </DockPanel>
         <DockPanel Grid.RowSpan="2" Margin="-54,0,0,0">
             <Border Background="#FF2B2B2B" Margin="0,550,0,0" Width="1373"></Border>
