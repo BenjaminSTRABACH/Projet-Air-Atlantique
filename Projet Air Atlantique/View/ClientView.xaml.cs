@@ -33,11 +33,6 @@ namespace Projet_Air_Atlantique.View
             this.listeClients.ItemsSource = list_clients_controllers;
         }
 
-        private void ListeClients_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Ajout_client_click(object sender, RoutedEventArgs e)
         {
             string nom = nom_client.Text;
@@ -54,6 +49,16 @@ namespace Projet_Air_Atlantique.View
 
             ClientController clientController = new ClientController(0, nom, prenom, genre, date_naissance , 0, tel, mail);
             mod_client.AddClientBinders(clientController);
+        }
+
+        private void Supp_client_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListeClients_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
