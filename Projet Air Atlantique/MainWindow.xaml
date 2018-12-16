@@ -80,6 +80,6 @@
                 <Image Source="Medias/maintenance.png" Width="31" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,18,0,0" Grid.Column="4" Height="30" RenderTransformOrigin="0.041,0.044"/>
             </Grid>
         </Grid>
-        <DockPanel Name="View" HorizontalAlignment="Stretch" Height="621" LastChildFill="False" Margin="0,69,-0.4,0" VerticalAlignment="Top"/>
+        <DockPanel Name="View" HorizontalAlignment="Stretch" Height="621" LastChildFill="False" Margin="0,69,-0.4,0" VerticalAlignment="Top" Background="White"/>
     </Grid>
 </Window>

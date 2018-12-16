@@ -25,12 +25,17 @@ namespace Projet_Air_Atlantique.View
         Mod_Client mod_client = new Mod_Client();
         static List<ClientController> list_clients_controllers = new List<ClientController>();
 
-        public ClientView()
+        public void DisplayListClients()
         {
-            InitializeComponent();
             List<ClientController> list_clients_controllers = new List<ClientController>();
             mod_client.SelectClientBinders(list_clients_controllers);
             this.listeClients.ItemsSource = list_clients_controllers;
+        }
+
+        public ClientView()
+        {
+            InitializeComponent();
+            DisplayListClients();
         }
 
         private void Ajout_client_click(object sender, RoutedEventArgs e)
@@ -46,9 +51,9 @@ namespace Projet_Air_Atlantique.View
             {
                 genre = 'F';
             }
-
             ClientController clientController = new ClientController(0, nom, prenom, genre, date_naissance , 0, tel, mail);
             mod_client.AddClientBinders(clientController);
+            DisplayListClients();
         }
 
         private void Supp_client_click(object sender, RoutedEventArgs e)

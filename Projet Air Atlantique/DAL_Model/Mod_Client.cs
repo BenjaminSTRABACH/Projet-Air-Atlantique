@@ -51,6 +51,7 @@ namespace Projet_Air_Atlantique.Models.DAL
             cmd.Parameters.AddWithValue("@mail", c.MailProperty);
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
+            MessageBox.Show("Le client a bien été ajouté");
             connect.CloseConnection();
         }
 
@@ -69,6 +70,7 @@ namespace Projet_Air_Atlantique.Models.DAL
             cmd.Parameters.AddWithValue("@idClient", c.IdClientProperty);
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
+            MessageBox.Show("Le client a bien été modifié");
             connect.CloseConnection();
         }
 

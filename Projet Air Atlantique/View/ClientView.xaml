@@ -17,11 +17,15 @@
         <DockPanel HorizontalAlignment="Left" Height="580" LastChildFill="False" VerticalAlignment="Top" Width="965" Margin="10,10,0,0">
             <DockPanel DockPanel.Dock="Left" Margin="0,0,0,-0.2" Width="0"/>
             <Grid Width="1231" Margin="0,0,0,-0.2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="453*"/>
+                    <RowDefinition Height="128*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="0*"/>
                 </Grid.ColumnDefinitions>
-                <DataGrid Name="listeClients" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Right" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeClients_SelectionChanged" Width="1236" Margin="-3,31,-1.8,1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <DataGrid Name="listeClients" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Right" BorderBrush="Black" Background="#FFFFFF" SelectionChanged="ListeClients_SelectionChanged" Width="1236" Margin="-3,1,-1.8,1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
                     <DataGrid.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -62,7 +66,7 @@
                   FirstDayOfWeek="Monday" Margin="1000,282,34,290" Name="dateN_client"/>
         <TextBox Text="Téléphone" Margin="1000,334,34,240" FontFamily="Roboto" Name="tel_client"/>
         <TextBox Text="Mail" Margin="1000,386,34,188" FontFamily="Roboto" Name="mail_client"/>
-        <Button Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="146" Margin="1018,446,0,0" Height="45" Background="#FF090D5C" BorderBrush="#FF090D5C" Click="Ajout_client_click"/>
+        <Button Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="146" Margin="1028,467,0,0" Height="45" Background="#FF090D5C" BorderBrush="#FF090D5C" Click="Ajout_client_click"/>
         <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </UserControl>
